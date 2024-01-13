@@ -4,29 +4,70 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeMainViewController" customModule="AdvancedMovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-aV-T3d">
+                                <rect key="frame" x="0.0" y="153" width="393" height="665"/>
+                                <color key="backgroundColor" red="0.14509806040000001" green="0.1647058874" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="bjn-6A-gzU">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="20" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="What do you want to watch?" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMj-2w-6Nt">
+                                <rect key="frame" x="20" y="69" width="353" height="34"/>
+                                <color key="backgroundColor" red="0.14509806040000001" green="0.1647058874" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rn8-aC-a8o">
+                                <rect key="frame" x="20" y="113" width="353" height="40"/>
+                                <color key="backgroundColor" red="0.231372565" green="0.2470588088" blue="0.27450981740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hdS-pg-R4d"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.14509806040000001" green="0.1647058874" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rn8-aC-a8o" firstAttribute="top" secondItem="LMj-2w-6Nt" secondAttribute="bottom" constant="10" id="6O1-Qc-VTS"/>
+                            <constraint firstItem="LMj-2w-6Nt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9eN-lJ-b45"/>
+                            <constraint firstItem="LMj-2w-6Nt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bdz-pj-hh6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gNp-aV-T3d" secondAttribute="bottom" id="EUR-CK-Qlb"/>
+                            <constraint firstItem="gNp-aV-T3d" firstAttribute="top" secondItem="rn8-aC-a8o" secondAttribute="bottom" id="IlI-4F-ll8"/>
+                            <constraint firstItem="rn8-aC-a8o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ytb-fm-02E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LMj-2w-6Nt" secondAttribute="trailing" constant="20" id="frX-85-ZZk"/>
+                            <constraint firstItem="gNp-aV-T3d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ibf-r7-wTT"/>
+                            <constraint firstItem="gNp-aV-T3d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jAE-NK-rVT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rn8-aC-a8o" secondAttribute="trailing" constant="20" id="w86-bL-V6L"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainCollectionView" destination="gNp-aV-T3d" id="ALK-e4-KUy"/>
+                        <outlet property="searchBar" destination="rn8-aC-a8o" id="tvf-YJ-atf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="4"/>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
