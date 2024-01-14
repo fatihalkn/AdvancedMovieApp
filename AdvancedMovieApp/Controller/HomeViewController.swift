@@ -14,6 +14,7 @@ class HomeMainViewController: UIViewController {
         
         //MARK: - Created SearchBar
         
+        
                 let imageIcon = UIImageView()
                 imageIcon.image = UIImage(named: "Search1")
                 let contentView = UIView()
@@ -24,6 +25,7 @@ class HomeMainViewController: UIViewController {
                 searchBar.leftViewMode = .always
                 searchBar.clearButtonMode = .whileEditing
         
+        
         //MARK: - Func Call
         setupRegister()
         setupDelegets()
@@ -31,12 +33,15 @@ class HomeMainViewController: UIViewController {
     }
     
     fileprivate func viewModelConfiguration() {
-        viewModel.getCategoryItems()
+        viewModel.getNowPlayingMovies()
         viewModel.errorCallback = { [weak self] errorMessage in
             print("error: \(errorMessage)")
         }
         viewModel.succesCallback = { [weak self] in
-            self?.mainCollectionView.reloadData()
+            DispatchQueue.main.async {
+                self?.mainCollectionView.reloadData()
+            }
+            
         }
     }
     
@@ -73,7 +78,7 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
             switch collectionView {
             case mainCollectionView:
                 let header = mainCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
-                let tabHeader = mainCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TabsCollectionViewCell.identifier, for: indexPath) as! TabsCollectionViewCell
+                header.delegate = self
                 return header
                 
             default: return.init()
@@ -91,12 +96,12 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return viewModel.movie?.results?.count ?? 0
+       return viewModel.categoryMovies?.results?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: HeaderCollectionCell.identifier, for: indexPath) as! HeaderCollectionCell
-        if let movie = viewModel.movie?.results?[indexPath.item] {
+        if let movie = viewModel.categoryMovies?.results?[indexPath.item] {
             cell.configure(data: movie)
         }
         return cell
@@ -113,6 +118,24 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
             
         }
         
+    }
+    
+    
+}
+
+//MARK: - HeaderCollectionReusableViewDelegate
+extension HomeMainViewController: HeaderCollectionReusableViewDelegate {
+    func didSelectTab(type: HomeTabType) {
+        switch type {
+        case .popular:
+            viewModel.getPopularMovies()
+        case .nowPlaying:
+            viewModel.getNowPlayingMovies()
+        case .upcoming:
+            viewModel.getUpcomingMovies()
+        case .topRate:
+            viewModel.getTopRateMovies()
+        }
     }
     
     

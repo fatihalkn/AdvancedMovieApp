@@ -7,6 +7,22 @@
 
 import UIKit
 
+struct HomeTabData {
+    let title: String
+    let type: HomeTabType
+}
+
+enum HomeTabType {
+    case popular
+    case nowPlaying
+    case upcoming
+    case topRate
+}
+
+protocol HeaderCollectionReusableViewDelegate: AnyObject {
+    func didSelectTab(type: HomeTabType)
+}
+
 class HeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var tabsCollectionView: UICollectionView!
@@ -14,12 +30,20 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     let viewModel = HomeViewModel()
     
-    let tabLbl = ["Now playing","Upcoming","Top rated","Popular"]
+    let tabDatas: [HomeTabData] = [
+        .init(title: "Now Playing", type: .nowPlaying),
+        .init(title: "Popular", type: .popular),
+        .init(title: "Upcoming", type: .upcoming),
+        .init(title: "Top Rate", type: .topRate)
+        ]
     
     static let identifier = "HeaderCollectionReusableView"
     
+    var delegate: HeaderCollectionReusableViewDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         registerCel()
         setupDelegets()
         viewModelConfiguration()
@@ -28,12 +52,18 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     fileprivate func viewModelConfiguration() {
         viewModel.getCategoryItems()
         viewModel.errorCallback = { [weak self] errorMessage in
-            print("error: \(errorMessage)")
+            
+           
         }
         viewModel.succesCallback = { [weak self] in
-            self?.headerCollectionView.reloadData()
+            DispatchQueue.main.async {
+                self?.headerCollectionView.reloadData()
+            }
+            
         }
     }
+    
+    
     
     func registerCel() {
         headerCollectionView.register(UINib(nibName: HeaderCollectionCell.identifier, bundle: nil), 
@@ -58,10 +88,10 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case headerCollectionView:
-            return viewModel.movie?.results?.count ?? 0
+            return viewModel.popularMovies?.results?.count ?? 0
             
         case tabsCollectionView:
-            return tabLbl.count
+            return tabDatas.count
         default: return .init()
             
         }
@@ -73,18 +103,35 @@ class HeaderCollectionReusableView: UICollectionReusableView {
                 
             case headerCollectionView:
                 let cell = headerCollectionView.dequeueReusableCell(withReuseIdentifier: HeaderCollectionCell.identifier, for: indexPath) as! HeaderCollectionCell
-                if let movie = viewModel.movie?.results?[indexPath.item] {
+                if let movie = viewModel.popularMovies?.results?[indexPath.item] {
                     cell.configure(data: movie)
                 }
                 return cell
                 
             case tabsCollectionView:
                 let cell = tabsCollectionView.dequeueReusableCell(withReuseIdentifier: TabsCollectionViewCell.identifier, for: indexPath) as! TabsCollectionViewCell
-                cell.tabTxtLbl.text = tabLbl[indexPath.item]
+                cell.tabTxtLbl.text = tabDatas[indexPath.item].title
                 return cell
             default: return .init()
             }
             
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            
+            switch collectionView {
+                
+                
+            case headerCollectionView:
+                break
+            case tabsCollectionView:
+                tabsCollectionView.deselectItem(at: indexPath, animated: true)
+                let selectedTabType = tabDatas[indexPath.item].type
+                delegate?.didSelectTab(type: selectedTabType)
+                
+            default:
+                break
+            }
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -95,7 +142,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
                 return .init(width: cellWidth, height: cellHeight)
                 
             case tabsCollectionView:
-                let cellWidth: CGFloat = (collectionView.frame.width ) / 3
+                let cellWidth: CGFloat = (collectionView.frame.width ) / 3.5
                 let cellHeight: CGFloat = collectionView.frame.height
                 return .init(width: cellWidth, height: cellHeight)
             default: return .init()

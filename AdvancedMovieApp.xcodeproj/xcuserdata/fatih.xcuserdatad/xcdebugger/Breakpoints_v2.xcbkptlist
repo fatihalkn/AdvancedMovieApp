@@ -3,4 +3,70 @@
    uuid = "169ACDFB-7A3D-43B9-939F-01EA6B8B4123"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA758691-9A13-485C-A02E-550B1472885B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/CustomCells/Reusable/HeaderCollectionReusableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "viewModelConfiguration()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA758691-9A13-485C-A02E-550B1472885B - 317bd9fad9483ad2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in AdvancedMovieApp.HeaderCollectionReusableView.viewModelConfiguration() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/CustomCells/Reusable/HeaderCollectionReusableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "CA758691-9A13-485C-A02E-550B1472885B - 317bd9fad9483ad2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in AdvancedMovieApp.HeaderCollectionReusableView.viewModelConfiguration() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/CustomCells/Reusable/HeaderCollectionReusableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DD77C38-EF11-48D3-A1A2-3B953E27910D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/CustomCells/Reusable/HeaderCollectionReusableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "HeaderCollectionReusableViewDelegate"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -13,7 +13,6 @@ class TabsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var tabTxtLbl: UILabel!
     
-    static let tabLbl = ["Now playing","Upcoming","Top rated","Popular"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
