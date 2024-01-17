@@ -19,6 +19,7 @@ class HeaderCollectionCell: UICollectionViewCell {
     
     func configure(data: HeaderCollectionCellProtocol) {
         imgView.sd_setImage(with: URL(string: data.poster_path))
+        
     }
 
     override func awakeFromNib() {

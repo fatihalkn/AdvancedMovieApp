@@ -9,6 +9,8 @@ class HomeMainViewController: UIViewController {
     
     let viewModel = HomeViewModel()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +48,11 @@ class HomeMainViewController: UIViewController {
     }
     
     
+        
+        
+    
+    
+    
     func setupRegister() {
         mainCollectionView.register(
             UINib(nibName: HeaderCollectionReusableView.identifier, bundle: nil),
@@ -80,7 +87,6 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
                 let header = mainCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
                 header.delegate = self
                 return header
-                
             default: return.init()
                 
             }
@@ -120,6 +126,16 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let selectedMovieId = viewModel.categoryMovies?.results?[indexPath.item].id {
+            if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+                detailViewController.movideId = selectedMovieId
+                detailViewController.modalTransitionStyle = .coverVertical
+                navigationController?.pushViewController(detailViewController, animated: true)
+            }
+        }
+    }
+
     
 }
 

@@ -18,8 +18,18 @@ class NetworkHelper {
     private let baseURL = "https://api.themoviedb.org/3/"
     private let apiKey = "936011434e81730e4cef629bc41dbfb3"
     
+    
     func requestUrl(url: String) -> String {
         baseURL + url + "?api_key=\(apiKey)"
+    }
+    
+    func requestDetailUrl(url: String, id: Int) -> String {
+        baseURL + url + "\(id)" + "?api_key=\(apiKey)"
+    }
+    
+    func requestSearchUrl(url: String, query: String) -> String {
+        baseURL + url + "\(query)"
+    
     }
 }
 

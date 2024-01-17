@@ -15,6 +15,11 @@ class HomeViewModel {
     var errorCallback: ((String)->())?
     var succesCallback: (()->())?
     
+
+    
+    
+    
+    
     func getCategoryItems() {
         manager.getPopularMovies { [weak self] movie, error in
             if let error = error {

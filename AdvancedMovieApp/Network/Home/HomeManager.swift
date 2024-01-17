@@ -12,10 +12,11 @@ protocol HomeManagerProtocol {
     func getNowPlayingMovies(complete: @escaping((MoviesModel?, Error?) -> ()))
     func getUpcomingMovies(complete: @escaping((MoviesModel?, Error?) -> ()))
     func getTopRateMovies(complete: @escaping((MoviesModel?, Error?) -> ()))
+    
 
 }
 
-class HomeManager: HomeManagerProtocol {
+class HomeManager: HomeManagerProtocol {    
     
     static let sheard = HomeManager()
     
