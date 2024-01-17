@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var searchBarTextField: UITextField!
+ 
     
     var searchData: [MovieResult] = []
     let searcAPICaller = SearchManager()
@@ -21,7 +22,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         setupDelegets()
-        setupRegister()
         
         let imageIcon = UIImageView()
         imageIcon.image = UIImage(named: "Search1")
@@ -32,6 +32,19 @@ class SearchViewController: UIViewController {
         searchBarTextField.leftView = contentView
         searchBarTextField.leftViewMode = .always
         searchBarTextField.clearButtonMode = .whileEditing
+        
+        
+        
+//        func configure(movieModel: MovieDetail) {
+//            movieTitle.text = movieModel.originalTitle
+//            movieYear.text = movieModel.releaseDate
+//            movieTime.text = "\(movieModel.runtime!)"
+//            movieRate.text = "\(movieModel.popularity!)"
+//            if let genre = movieModel.genres?.first {
+//                mobieType.text = genre.name
+//            }
+        
+        
         
     }
     
@@ -59,9 +72,7 @@ class SearchViewController: UIViewController {
         searchBarTextField.delegate = self
     }
     
-    func setupRegister() {
-        mainTableView.register(UINib(nibName: HeaderCollectionCell.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCollectionCell.identifier)
-    }
+    
     
 }
 
@@ -71,11 +82,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderCollectionCell.identifier, for: indexPath) as! HeaderCollectionCell
-        if let movie = searchData[indexPath.row].title {
-            cell.configure(data: movie as! HeaderCollectionCellProtocol)
-            return UITableViewCell()
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as! SearchTableViewCell
+        let movie = searchData[indexPath.row]
+        cell.configure(data: movie)
         
         return cell
     }
@@ -91,6 +100,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITe
         
         return true
     }
+    
+    
     
     
 }

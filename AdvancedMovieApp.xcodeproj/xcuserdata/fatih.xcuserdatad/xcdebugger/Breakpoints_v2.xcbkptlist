@@ -443,8 +443,8 @@
             filePath = "AdvancedMovieApp/Controller/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "searchInAPI(query:)"
             landmarkType = "7">
             <Locations>
@@ -491,8 +491,8 @@
             filePath = "AdvancedMovieApp/Controller/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "searchInAPI(query:)"
             landmarkType = "7">
             <Locations>

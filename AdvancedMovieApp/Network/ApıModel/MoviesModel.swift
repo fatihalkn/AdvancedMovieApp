@@ -19,7 +19,7 @@ struct MoviesModel: Codable {
 }
 
 // MARK: - Result
-struct MovieResult: Codable, HeaderCollectionCellProtocol {
+struct MovieResult: Codable, HeaderCollectionCellProtocol, tableViewCellProtocol {
         var poster_path: String {
         "https://image.tmdb.org/t/p/original\(posterPath ?? "")"
             
