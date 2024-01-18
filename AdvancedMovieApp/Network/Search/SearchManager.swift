@@ -26,7 +26,6 @@ class SearchManager: SearchManagerProtocol {
     
     func getSearchMovies(query: String, complete: @escaping ((MoviesModel?, Error?) -> ())) {
         let searchRequestUrl = NetworkHelper.sheard.requestSearchUrl(url: SearchHelper.search.rawValue, query: query)
-        print(searchRequestUrl)
         NetworkManager.shared.request(type: MoviesModel.self, url: searchRequestUrl, method: .get) { response in
             switch response {
             case .success(let data):

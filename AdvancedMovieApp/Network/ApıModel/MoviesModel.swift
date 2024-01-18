@@ -10,7 +10,7 @@ struct MoviesModel: Codable {
     let page: Int?
     let results: [MovieResult]?
     let totalPages, totalResults: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case  page, results
         case totalPages = "total_pages"
@@ -19,10 +19,22 @@ struct MoviesModel: Codable {
 }
 
 // MARK: - Result
-struct MovieResult: Codable, HeaderCollectionCellProtocol, tableViewCellProtocol {
-        var poster_path: String {
+struct MovieResult: Codable, HeaderCollectionCellProtocol, TableViewCellProtocol {
+    var movieTitle: String {
+        originalTitle ?? "Error Title"
+    }
+    
+    var movieRate: Double {
+        voteAverage ?? 0.0
+    }
+    
+    var movieYear: String {
+        releaseDate ?? "Error Year"
+    }
+    
+    var poster_path: String {
         "https://image.tmdb.org/t/p/original\(posterPath ?? "")"
-            
+        
         
     }
     
@@ -36,7 +48,7 @@ struct MovieResult: Codable, HeaderCollectionCellProtocol, tableViewCellProtocol
     let video: Bool?
     let voteAverage: Double?
     let voteCount: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"

@@ -7,35 +7,47 @@
 
 import UIKit
 
-protocol tableViewCellProtocol {
+protocol TableViewCellProtocol {
     var poster_path: String { get }
+    var movieTitle: String { get }
+    var movieRate: Double { get }
+    var movieYear: String { get }
+    
 }
-
 
 class SearchTableViewCell: UITableViewCell {
     
     static let identifier = "SearchTableViewCell"
     
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieRate: UILabel!
+
+    @IBOutlet weak var movieYear: UILabel!
     
-    func configure(data: tableViewCellProtocol ) {
-    imgView.sd_setImage(with: URL(string: data.poster_path))
-}
+    
+    
+    func configure(data: TableViewCellProtocol ) {
+        imgView.sd_setImage(with: URL(string: data.poster_path))
+        movieTitle.text = data.movieTitle
+        movieRate.text = "\(data.movieRate)"
+        movieYear.text = data.movieYear
+    }
+    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         
-            
-        }
-        
-    override func setSelected(_ selected: Bool, animated: Bool) {
-            super.setSelected(selected, animated: animated)
-            
-            // Configure the view for the selected state
-        }
+       
         
         
         
     }
+    
+   
+    
+    
+}
 

@@ -13,14 +13,14 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var searchBarTextField: UITextField!
- 
     
+    let viewModel = HomeViewModel()
     var searchData: [MovieResult] = []
     let searcAPICaller = SearchManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         setupDelegets()
         
         let imageIcon = UIImageView()
@@ -33,16 +33,6 @@ class SearchViewController: UIViewController {
         searchBarTextField.leftViewMode = .always
         searchBarTextField.clearButtonMode = .whileEditing
         
-        
-        
-//        func configure(movieModel: MovieDetail) {
-//            movieTitle.text = movieModel.originalTitle
-//            movieYear.text = movieModel.releaseDate
-//            movieTime.text = "\(movieModel.runtime!)"
-//            movieRate.text = "\(movieModel.popularity!)"
-//            if let genre = movieModel.genres?.first {
-//                mobieType.text = genre.name
-//            }
         
         
         
@@ -88,6 +78,25 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITe
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        mainTableView.deselectRow(at: indexPath, animated: true)
+        if let selectedMovieId = searchData[indexPath.row].id {
+            if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+                detailViewController.movideId = selectedMovieId
+                detailViewController.modalTransitionStyle = .coverVertical
+                navigationController?.pushViewController(detailViewController, animated: true)
+                
+            }
+        }
+        
+    }
+    
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let currentText = textField.text,

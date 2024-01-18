@@ -19,7 +19,7 @@ class DetailViewModel {
             if let error = error {
                 self?.errorCallback?(error.localizedDescription)
             } else {
-                print(id)
+                
                 self?.movieDetail = movieDetail
                 self?.succesCallback?()
             }

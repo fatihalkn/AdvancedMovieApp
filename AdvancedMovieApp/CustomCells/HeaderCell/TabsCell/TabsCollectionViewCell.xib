@@ -29,10 +29,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="CJF-Op-lCQ" secondAttribute="trailing" constant="5" id="86M-Ad-pkE"/>
-                <constraint firstItem="CJF-Op-lCQ" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.939394" id="CYS-Nd-JZp"/>
                 <constraint firstItem="CJF-Op-lCQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="MH4-q1-7bj"/>
                 <constraint firstItem="CJF-Op-lCQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="QK4-gg-EdS"/>
-                <constraint firstItem="CJF-Op-lCQ" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.791667" id="VaV-kJ-cjO"/>
                 <constraint firstAttribute="bottom" secondItem="CJF-Op-lCQ" secondAttribute="bottom" constant="5" id="oz8-1N-2NJ"/>
             </constraints>
             <size key="customSize" width="165" height="48"/>

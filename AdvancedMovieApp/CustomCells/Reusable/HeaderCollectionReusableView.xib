@@ -10,11 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCollectionReusableView" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView" customModule="AdvancedMovieApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="444" height="309"/>
+            <rect key="frame" x="0.0" y="0.0" width="326" height="328"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wni-ut-6oK">
-                    <rect key="frame" x="0.0" y="0.0" width="444" height="273"/>
+                    <rect key="frame" x="0.0" y="0.0" width="326" height="224"/>
                     <color key="backgroundColor" red="0.14509806040000001" green="0.1647058874" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="oqn-GW-7ot">
                         <size key="itemSize" width="128" height="128"/>
@@ -24,11 +24,8 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rt4-Ux-6lp">
-                    <rect key="frame" x="0.0" y="279" width="444" height="30"/>
+                    <rect key="frame" x="0.0" y="244" width="326" height="84"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="lzA-Fa-HFu"/>
-                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mce-hO-I3Z">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -39,11 +36,12 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="rt4-Ux-6lp" secondAttribute="bottom" id="17s-My-zW0"/>
-                <constraint firstItem="rt4-Ux-6lp" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="32c-4Y-xZ7"/>
-                <constraint firstItem="rt4-Ux-6lp" firstAttribute="top" secondItem="wni-ut-6oK" secondAttribute="bottom" constant="6" id="ain-V5-dKB"/>
+                <constraint firstAttribute="bottom" secondItem="rt4-Ux-6lp" secondAttribute="bottom" id="OHn-Zf-Tar"/>
+                <constraint firstItem="rt4-Ux-6lp" firstAttribute="top" secondItem="wni-ut-6oK" secondAttribute="bottom" constant="20" id="TrW-Hn-bnL"/>
+                <constraint firstItem="rt4-Ux-6lp" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="g0C-No-rLy"/>
+                <constraint firstItem="rt4-Ux-6lp" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="gln-4a-wdR"/>
                 <constraint firstItem="wni-ut-6oK" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="kO5-ij-RIm"/>
-                <constraint firstItem="rt4-Ux-6lp" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="mnd-4e-wVA"/>
+                <constraint firstItem="wni-ut-6oK" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="0.6825" id="o5R-6z-7iB"/>
                 <constraint firstItem="wni-ut-6oK" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="uOv-06-LnC"/>
                 <constraint firstItem="wni-ut-6oK" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="uWk-KQ-gBt"/>
             </constraints>
@@ -51,7 +49,7 @@
                 <outlet property="headerCollectionView" destination="wni-ut-6oK" id="Rv1-pc-TWy"/>
                 <outlet property="tabsCollectionView" destination="rt4-Ux-6lp" id="wCo-UL-aXY"/>
             </connections>
-            <point key="canvasLocation" x="274.80916030534348" y="-74.295774647887328"/>
+            <point key="canvasLocation" x="459.5419847328244" y="-158.45070422535213"/>
         </collectionReusableView>
     </objects>
 </document>

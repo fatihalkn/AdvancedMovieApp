@@ -97,7 +97,7 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let headerWidth = collectionView.frame.width
-        let headerHeight = collectionView.frame.height * 0.35
+        let headerHeight = collectionView.frame.height * 0.60
         return .init(width: headerWidth, height: headerHeight)
     }
     

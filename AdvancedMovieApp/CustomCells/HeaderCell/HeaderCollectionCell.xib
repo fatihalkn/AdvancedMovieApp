@@ -16,24 +16,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="122" height="174"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gyv-eH-XoM">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gyv-eH-XoM">
                         <rect key="frame" x="0.0" y="0.0" width="122" height="174"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="122" id="9gM-0c-clj"/>
-                            <constraint firstAttribute="height" constant="174" id="LkZ-re-Ktf"/>
-                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Gyv-eH-XoM" secondAttribute="trailing" id="DsJ-Tl-K5l"/>
-                <constraint firstItem="Gyv-eH-XoM" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="MHD-FQ-i4e"/>
                 <constraint firstItem="Gyv-eH-XoM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="X1p-tL-Zy1"/>
                 <constraint firstItem="Gyv-eH-XoM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dxp-z0-a9e"/>
                 <constraint firstAttribute="bottom" secondItem="Gyv-eH-XoM" secondAttribute="bottom" id="lUj-XS-l8F"/>
-                <constraint firstItem="Gyv-eH-XoM" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="tc2-9d-Vt0"/>
             </constraints>
             <size key="customSize" width="133" height="142"/>
             <connections>
