@@ -150,54 +150,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2F0C7CD3-C267-4ED0-B25A-9F9E47389C9D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdvancedMovieApp/Network/ViewModel/DetailViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getMovieDetail(id:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2F0C7CD3-C267-4ED0-B25A-9F9E47389C9D - 1ee40daa890891f1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;AdvancedMovieApp.MovieDetail&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AdvancedMovieApp.DetailViewModel.getMovieDetail(id: Swift.Int) -&gt; ()"
-                  moduleName = "AdvancedMovieApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Network/ViewModel/DetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "2F0C7CD3-C267-4ED0-B25A-9F9E47389C9D - 1ee40daa890891f1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;AdvancedMovieApp.MovieDetail&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AdvancedMovieApp.DetailViewModel.getMovieDetail(id: Swift.Int) -&gt; ()"
-                  moduleName = "AdvancedMovieApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Network/ViewModel/DetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "256">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "19C02750-5F81-4D74-94E7-AC17AD7F0FB1"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -269,8 +221,8 @@
             filePath = "AdvancedMovieApp/Network/Ap&#x131;Model/MovieDetailModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "MovieDetail"
             landmarkType = "14">
          </BreakpointContent>
@@ -518,32 +470,556 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B88B3BEA-5CB1-47F7-9BA3-4B331F46F834"
-            shouldBeEnabled = "No"
+            uuid = "9362EFFA-DF36-4EE3-A2A5-AF6FD0CC0B42"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AdvancedMovieApp/Controller/DetailViewController.swift"
+            filePath = "AdvancedMovieApp/Network/Core/MovieDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "configure(data:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "persistentContainer"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1DF1469-4564-40FE-B814-9F10E2FBBFE7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/Network/Core/MovieDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "saveMovie(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F7AE1FE-03D4-4FCB-8DA8-413AD2FE7B4C"
+            uuid = "E68C7D49-08B6-4776-AEB9-B1118784ABD0"
             shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/Network/Core/MovieDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "saveMovie(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9AE2B3D4-0878-43C3-886B-2668C0357EF2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/Controller/SaveViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetchSaveMovies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B0EEB5E-CB26-4C5E-A1AE-28D765768D66"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/DataManager/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "saveMovieDetailToCoreData(model:comletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA661B4F-E89A-45F2-98D5-DCCDE8D11781"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdvancedMovieApp/Controller/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DA661B4F-E89A-45F2-98D5-DCCDE8D11781 - 1846883c47a0cce7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "DA661B4F-E89A-45F2-98D5-DCCDE8D11781 - 1846883c47a0cce7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F0241A9-611B-47C4-ABD5-7AF258B3D478"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/Controller/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F0241A9-611B-47C4-ABD5-7AF258B3D478 - 1846883c47a0ccc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "0F0241A9-611B-47C4-ABD5-7AF258B3D478 - 91bc97ac50913ddd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFA47E23-6E06-4EAD-88B3-D896D6A3A832"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/DataManager/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "saveMovieDetailToCoreData(model:comletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FFA47E23-6E06-4EAD-88B3-D896D6A3A832 - 2ba93d04e1ea0954"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  uuid = "FFA47E23-6E06-4EAD-88B3-D896D6A3A832 - 2ba93d04e1ea09b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "FFA47E23-6E06-4EAD-88B3-D896D6A3A832 - 2ba93d04e1ea09b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "568">
+               </Location>
+               <Location
+                  uuid = "FFA47E23-6E06-4EAD-88B3-D896D6A3A832 - 2ba93d04e1ea09b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DACC1DB-92AA-4D51-AFA0-97D75E57458D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/DataManager/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "saveMovieDetailToCoreData(model:comletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6DACC1DB-92AA-4D51-AFA0-97D75E57458D - 2ba93d04e1ea086f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1524">
+               </Location>
+               <Location
+                  uuid = "6DACC1DB-92AA-4D51-AFA0-97D75E57458D - 2ba93d04e1ea086f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1412">
+               </Location>
+               <Location
+                  uuid = "6DACC1DB-92AA-4D51-AFA0-97D75E57458D - 2ba93d04e1ea080e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  uuid = "6DACC1DB-92AA-4D51-AFA0-97D75E57458D - 2ba93d04e1ea080e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.saveMovieDetailToCoreData(model: AdvancedMovieApp.MovieDetail, comletion: (Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1368">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF922E26-BA2B-45E1-842C-ACB8B2AF77E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/DataManager/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
-            landmarkName = "saveButton(_:)"
+            landmarkName = "fetchWatchListFromDataBase(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCE3C250-CDE9-4849-8EF0-DBFB664BA998"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/DataManager/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchWatchListFromDataBase(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DCE3C250-CDE9-4849-8EF0-DBFB664BA998 - 15befc6672067780"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.fetchWatchListFromDataBase(completion: (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "DCE3C250-CDE9-4849-8EF0-DBFB664BA998 - 15befc66720677a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.fetchWatchListFromDataBase(completion: (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3659B98-0C68-4483-BACF-0C845416A76C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/DataManager/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetchWatchListFromDataBase(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F3659B98-0C68-4483-BACF-0C845416A76C - 15befc6672067867"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.fetchWatchListFromDataBase(completion: (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "480">
+               </Location>
+               <Location
+                  uuid = "F3659B98-0C68-4483-BACF-0C845416A76C - 15befc6672067846"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdvancedMovieApp.DataManager.fetchWatchListFromDataBase(completion: (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/DataManager/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "596">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19E89398-D664-4F6A-8FB7-D59AE1AB63B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/Controller/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "19E89398-D664-4F6A-8FB7-D59AE1AB63B0 - 214db83cdb47a5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; () in AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1032">
+               </Location>
+               <Location
+                  uuid = "19E89398-D664-4F6A-8FB7-D59AE1AB63B0 - 214db83cdb47a5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; () in AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "892">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11163E4F-F70E-48EC-8D17-515BF0550270"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/Controller/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "11163E4F-F70E-48EC-8D17-515BF0550270 - 214db83cdb47a7c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; () in AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "892">
+               </Location>
+               <Location
+                  uuid = "11163E4F-F70E-48EC-8D17-515BF0550270 - 214db83cdb47a7c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;Swift.Array&lt;AdvancedMovieApp.SaveMovie&gt;, Swift.Error&gt;) -&gt; () in AdvancedMovieApp.DetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AdvancedMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/AdvancedMovieApp/AdvancedMovieApp/AdvancedMovieApp/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "588">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "277ECB8C-CACA-4DBA-9CD3-12F5C17B1324"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdvancedMovieApp/Controller/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
