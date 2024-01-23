@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 class HomeMainViewController: UIViewController {
@@ -9,13 +7,10 @@ class HomeMainViewController: UIViewController {
     
     let viewModel = HomeViewModel()
     
-    
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         
         //MARK: - Created SearchBar
-        
         
                 let imageIcon = UIImageView()
                 imageIcon.image = UIImage(named: "Search1")
@@ -27,7 +22,6 @@ class HomeMainViewController: UIViewController {
                 searchBar.leftViewMode = .always
                 searchBar.clearButtonMode = .whileEditing
         
-        
         //MARK: - Func Call
         setupRegister()
         setupDelegets()
@@ -36,7 +30,7 @@ class HomeMainViewController: UIViewController {
     
     fileprivate func viewModelConfiguration() {
         viewModel.getNowPlayingMovies()
-        viewModel.errorCallback = { [weak self] errorMessage in
+        viewModel.errorCallback = {  errorMessage in
             print("error: \(errorMessage)")
         }
         viewModel.succesCallback = { [weak self] in
@@ -47,28 +41,21 @@ class HomeMainViewController: UIViewController {
         }
     }
     
-    
-        
-        
-    
-    
-    
     func setupRegister() {
         mainCollectionView.register(
             UINib(nibName: HeaderCollectionReusableView.identifier, bundle: nil),
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: HeaderCollectionReusableView.identifier)
-        
         mainCollectionView.register(
             UINib(nibName: TabsCollectionViewCell.identifier, bundle: nil),
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: TabsCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: HeaderCollectionCell.identifier, bundle: nil),
-                                    forCellWithReuseIdentifier: HeaderCollectionCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: TabsCollectionViewCell.identifier, bundle: nil),
-                                    forCellWithReuseIdentifier: TabsCollectionViewCell.identifier)
+        mainCollectionView.register(UINib(nibName: HeaderCollectionCell.identifier,
+                                          bundle: nil),
+                                          forCellWithReuseIdentifier: HeaderCollectionCell.identifier)
+        mainCollectionView.register(UINib(nibName: TabsCollectionViewCell.identifier,
+                                          bundle: nil),
+                                          forCellWithReuseIdentifier: TabsCollectionViewCell.identifier)
     }
     
     func setupDelegets() {
@@ -87,11 +74,11 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
                 let header = mainCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
                 header.delegate = self
                 return header
-            default: return.init()
-                
+            default:
+                return UICollectionReusableView()
             }
-        default: return.init()
-            
+        default: 
+            return UICollectionReusableView()
         }
     }
     
@@ -113,17 +100,15 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
         return cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case mainCollectionView:
             let cellWidth: CGFloat = (collectionView.frame.width - 60) / 3
             let cellHeight: CGFloat = cellWidth * 1.65
             return .init(width: cellWidth, height: cellHeight)
-        default: return .init()
-            
+        default:
+            return .init()
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -135,13 +120,11 @@ extension HomeMainViewController: UICollectionViewDataSource, UICollectionViewDe
             }
         }
     }
-
-    
 }
 
 //MARK: - HeaderCollectionReusableViewDelegate
 extension HomeMainViewController: HeaderCollectionReusableViewDelegate {
-    func didSelectTab(type: HomeTabType) {
+        func didSelectTab(type: HomeTabType) {
         switch type {
         case .popular:
             viewModel.getPopularMovies()
@@ -154,5 +137,12 @@ extension HomeMainViewController: HeaderCollectionReusableViewDelegate {
         }
     }
     
-    
-}
+    func didSelectMovie(movieId: Int) {
+            if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+                detailViewController.movideId = movieId
+                detailViewController.modalTransitionStyle = .coverVertical
+                navigationController?.pushViewController(detailViewController, animated: true)
+            }
+       }
+   }
+

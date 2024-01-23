@@ -8,14 +8,7 @@
 import UIKit
 import SwipeCellKit
 class WatchListMovieCell: SwipeCollectionViewCell {
-    
-   
-   
-    
     static let identifier = "WatchListMovieCell"
-    
-    
-
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
@@ -23,7 +16,7 @@ class WatchListMovieCell: SwipeCollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     func configre(data: SaveMovie) {

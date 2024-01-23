@@ -104,8 +104,6 @@
 		3D75F9EE2B51A3C200F77F59 = {
 			isa = PBXGroup;
 			children = (
-				3DFFE0C32B5BE1960039762F /* SaveMovie+CoreDataClass.swift */,
-				3DFFE0C42B5BE1960039762F /* SaveMovie+CoreDataProperties.swift */,
 				3D75F9F92B51A3C200F77F59 /* AdvancedMovieApp */,
 				3D75F9F82B51A3C200F77F59 /* Products */,
 			);
@@ -274,6 +272,8 @@
 		3DFFE0C92B5BE3E60039762F /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				3DFFE0C32B5BE1960039762F /* SaveMovie+CoreDataClass.swift */,
+				3DFFE0C42B5BE1960039762F /* SaveMovie+CoreDataProperties.swift */,
 				3DFFE0CA2B5BE3F60039762F /* DataManager.swift */,
 			);
 			path = DataManager;

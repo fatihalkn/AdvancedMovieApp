@@ -6,17 +6,9 @@
 //
 
 import Foundation
- 
 
 enum SearchHelper: String {
     case search = "search/movie?query="
-    
-//        var path: String {
-//        switch self {
-//        case .search: NetworkHelper.sheard.requestSearchUrl(url: SearchHelper.search.rawValue, query: que)
-//            
-//        }
-//    }
 }
 
 

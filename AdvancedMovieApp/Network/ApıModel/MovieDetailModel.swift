@@ -13,7 +13,7 @@ struct MovieDetail: Codable, DetailViewControllerProtocol {
     let budget: Int?
     let genres: [Genre]?
     let homepage: String?
-    let id: Int?
+    var id: Int?
     let imdbID, originalLanguage, originalTitle, overview: String?
     let popularity: Double?
     let posterPath: String?

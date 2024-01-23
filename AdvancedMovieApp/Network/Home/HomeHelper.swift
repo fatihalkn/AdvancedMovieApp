@@ -13,8 +13,6 @@ enum HomeEndpoint: String {
     case upcoming = "movie/upcoming"
     case topRate = "movie/top_rated"
     
-    
-    
     var path: String {
         switch self {
         case .popular:
@@ -25,11 +23,7 @@ enum HomeEndpoint: String {
            return NetworkHelper.sheard.requestUrl(url: HomeEndpoint.upcoming.rawValue)
         case .topRate:
            return NetworkHelper.sheard.requestUrl(url: HomeEndpoint.topRate.rawValue)
-        
         }
-    
     }
-    
-    
-    }
+}
 

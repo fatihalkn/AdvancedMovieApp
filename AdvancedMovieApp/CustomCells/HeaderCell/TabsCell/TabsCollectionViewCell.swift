@@ -13,10 +13,10 @@ class TabsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var tabTxtLbl: UILabel!
     
-    
-    override func awakeFromNib() {
+        override func awakeFromNib() {
         super.awakeFromNib()
-        
+        tabTxtLbl.layer.cornerRadius = 24
+        tabTxtLbl.layer.masksToBounds = true
     }
 
 }

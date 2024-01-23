@@ -22,11 +22,9 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieRate: UILabel!
-
+    
     @IBOutlet weak var movieYear: UILabel!
-    
-    
-    
+        
     func configure(data: TableViewCellProtocol ) {
         imgView.sd_setImage(with: URL(string: data.poster_path))
         movieTitle.text = data.movieTitle
@@ -34,20 +32,9 @@ class SearchTableViewCell: UITableViewCell {
         movieYear.text = data.movieYear
     }
     
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
-       
-        
-        
-        
     }
-    
-   
-    
-    
+
 }
 

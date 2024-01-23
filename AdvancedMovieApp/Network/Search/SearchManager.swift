@@ -7,22 +7,12 @@
 
 import Foundation
 
-
 protocol SearchManagerProtocol {
 func getSearchMovies(query: String, complete: @escaping((MoviesModel?, Error?) -> ()))
 }
-    
-
-
 
 class SearchManager: SearchManagerProtocol {
-    
-    
-    
-    
     static let sherad = SearchManager()
-    
-    
     
     func getSearchMovies(query: String, complete: @escaping ((MoviesModel?, Error?) -> ())) {
         let searchRequestUrl = NetworkHelper.sheard.requestSearchUrl(url: SearchHelper.search.rawValue, query: query)
@@ -35,6 +25,5 @@ class SearchManager: SearchManagerProtocol {
                 complete(nil, error)
             }
         }
-        
     }
 }

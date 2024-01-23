@@ -30,16 +30,10 @@ class WatchListController: UIViewController {
     func setupRegister() {
         watchListCollection.register(UINib(nibName: WatchListMovieCell.identifier, bundle: nil), forCellWithReuseIdentifier: WatchListMovieCell.identifier)
     }
-    
-    
     func setupDelegets() {
         watchListCollection.delegate = self
         watchListCollection.dataSource = self
-    
-        
     }
-        
-    
     func fetchLocalStorageForWatchList() {
         DataManager.shared.fetchWatchListFromDataBase { result in
             switch result {
@@ -53,8 +47,6 @@ class WatchListController: UIViewController {
     }
     
 }
-
-
 extension WatchListController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SwipeCollectionViewCellDelegate {
     
     func collectionView(_ collectionView: UICollectionView, editActionsForItemAt indexPath: IndexPath, for orientation: SwipeCellKit.SwipeActionsOrientation) -> [SwipeCellKit.SwipeAction]? {
@@ -88,18 +80,12 @@ extension WatchListController: UICollectionViewDelegate, UICollectionViewDataSou
                 detailViewController.movideId = Int(selectedMovieId)
                 detailViewController.modalTransitionStyle = .coverVertical
                 navigationController?.pushViewController(detailViewController, animated: true)
-
             }
-    }
+         }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth: CGFloat = collectionView.frame.width
         let cellHeight: CGFloat = 200
         return CGSize(width: cellWidth, height: cellHeight)
     }
-    
-    
-    
-
-        
 }

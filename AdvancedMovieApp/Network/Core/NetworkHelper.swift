@@ -29,7 +29,6 @@ class NetworkHelper {
     
     func requestSearchUrl(url: String, query: String) -> String {
         baseURL + url + "\(query)"
-    
     }
 }
 

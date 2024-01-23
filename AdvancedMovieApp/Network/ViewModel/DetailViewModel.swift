@@ -13,7 +13,6 @@ class DetailViewModel {
     var errorCallback: ((String)->())?
     var succesCallback: (()->())?
     
-    
     func getMovieDetail(id: Int) {
         manager.getMovieDetail(id: id) { [weak self] movieDetail, error in
             if let error = error {

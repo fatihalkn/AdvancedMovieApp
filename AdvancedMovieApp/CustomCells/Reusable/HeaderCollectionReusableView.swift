@@ -21,13 +21,14 @@ enum HomeTabType {
 
 protocol HeaderCollectionReusableViewDelegate: AnyObject {
     func didSelectTab(type: HomeTabType)
+    func didSelectMovie(movieId: Int)
 }
 
 class HeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var tabsCollectionView: UICollectionView!
     @IBOutlet weak var headerCollectionView: UICollectionView!
-    
+        
     let viewModel = HomeViewModel()
     
     let tabDatas: [HomeTabData] = [
@@ -43,17 +44,15 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         registerCel()
         setupDelegets()
         viewModelConfiguration()
     }
-    
+
     fileprivate func viewModelConfiguration() {
         viewModel.getCategoryItems()
-        viewModel.errorCallback = { [weak self] errorMessage in
+        viewModel.errorCallback = { errorMessage in
             
-           
         }
         viewModel.succesCallback = { [weak self] in
             DispatchQueue.main.async {
@@ -92,11 +91,12 @@ class HeaderCollectionReusableView: UICollectionReusableView {
             
         case tabsCollectionView:
             return tabDatas.count
-        default: return .init()
+        default:
+            return .init()
             
         }
             
-        }
+    }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             switch collectionView {
@@ -123,7 +123,10 @@ class HeaderCollectionReusableView: UICollectionReusableView {
                 
                 
             case headerCollectionView:
-                break
+                headerCollectionView.deselectItem(at: indexPath, animated: true)
+                if let selectedMovieId = viewModel.popularMovies?.results?[indexPath.item].id {
+                    delegate?.didSelectMovie(movieId: selectedMovieId)
+                }
             case tabsCollectionView:
                 tabsCollectionView.deselectItem(at: indexPath, animated: true)
                 let selectedTabType = tabDatas[indexPath.item].type

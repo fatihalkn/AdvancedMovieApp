@@ -13,7 +13,6 @@ class DetailManager {
     
     func getMovieDetail(id: Int, completion: @escaping (MovieDetail?, Error?) -> ()) {
         let detailRequestUrl = NetworkHelper.sheard.requestDetailUrl(url: DetailEndPoint.detail.rawValue, id: id )
-        
         NetworkManager.shared.request(type: MovieDetail.self, url: detailRequestUrl, method: .get) { response in
             switch response {
             case .success(let data):

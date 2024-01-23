@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
@@ -32,16 +31,7 @@ class SearchViewController: UIViewController {
         searchBarTextField.leftView = contentView
         searchBarTextField.leftViewMode = .always
         searchBarTextField.clearButtonMode = .whileEditing
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
     
     func searchInAPI(query: String) {
         searcAPICaller.getSearchMovies(query: query) { [weak self] movie, error in
@@ -54,16 +44,11 @@ class SearchViewController: UIViewController {
         }
     }
     
-    
     func setupDelegets() {
-        
         mainTableView.delegate = self
         mainTableView.dataSource = self
         searchBarTextField.delegate = self
     }
-    
-    
-    
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
@@ -75,7 +60,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITe
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as! SearchTableViewCell
         let movie = searchData[indexPath.row]
         cell.configure(data: movie)
-        
         return cell
     }
     
@@ -95,22 +79,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITe
         }
         
     }
-    
-    
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let currentText = textField.text,
               let range = Range(range, in: currentText) else {
             return true
         }
         let updateText = currentText.replacingCharacters(in: range, with: string)
-        
         searchInAPI(query: updateText)
-        
         return true
     }
-    
-    
-    
-    
 }
